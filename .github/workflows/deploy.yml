@@ -1,0 +1,30 @@
+name: Neoland ci cd
+
+# start run the workflow when someone make push on the main branch 
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    # gitubu create temp machine linux
+    runs-on: ubuntu-latest
+    steps:
+      # gitubu clone the repo in the temp machine
+      - uses: actions/checkout@v2
+      # install node js in the temp machine
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      # install dependencies 
+      - name: Install dependencies
+        run: npm install
+      # run test 
+      - name: Run tests
+        run: npm test
+
+        

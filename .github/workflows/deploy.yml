@@ -1,4 +1,4 @@
-name: Neoland ci cd
+name: Neoland Ci/CD
 
 # start run the workflow when someone make push on the main branch 
 

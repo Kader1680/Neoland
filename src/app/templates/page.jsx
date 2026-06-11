@@ -45,7 +45,9 @@ const templates = [
 export default function TemplatesPage() {
   return (
     <section className="p-10 min-h-screen ">
-      <h1 className="text-3xl font-bold mb-8 text-center text-black ">All Templates ({templates.length}) </h1>
+      <h1 className="text-3xl font-bold mb-8 text-center text-black ">
+        All Templates ({templates.length}) 
+      </h1>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {templates.map((tpl, index) => (
           <TemplateCard key={index} {...tpl} />

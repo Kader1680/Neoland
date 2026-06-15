@@ -1,4 +1,4 @@
-name: Neoland Ci/CD
+name: Neoland Ci 
 
 # start run the workflow when someone make push on the main branch 
 
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # gitubu clone the repo in the temp machine
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2j
       # install node js in the temp machine
       - name: Use Node.js 22.x
         uses: actions/setup-node@v2
